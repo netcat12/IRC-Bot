@@ -1,0 +1,11 @@
+Initialize an instance of the Internet Relay Chat (IRC) class, which encapsulates a set of behaviors for communication with an IRC server. This class contains member variables for the server address, port number, channel name, and bot nickname. A socket object is also created to facilitate the communication.
+
+Establish a connection to the IRC server by calling the connect() method of the IRC object. The method uses the socket object to connect to the server using the server address and port number specified during initialization.
+
+Join a specific channel on the IRC server by calling the join_channel() method of the IRC object. This method sends a message to the server to join the channel specified during initialization.
+
+Send a message to the IRC channel by calling the send_message() method of the IRC object. This method sends a message to the channel specified during initialization, with the text of the message specified as an argument.
+
+Enter a continuous loop to listen for incoming messages from the IRC server, using the listen() method of the IRC object. The method continuously reads data from the socket object, decodes the data into a message string, and checks if the message contains the "PING" keyword. If it does, the method responds to the server with a "PONG" message, using the socket object to send the response.
+
+Once the IRC bot has been initialized and connected to the server, it can send and receive messages from the specified channel.
